@@ -3,9 +3,9 @@ import StudentList from "../components/StudentList"
 
 function Students() {
 
-  const [students, setStudents] = useState([])
+  const [Students, setStudents] = useState([])
 
-  const studentData = [
+  const StudentData = [
     { id:1, name:"Lin", course:"BSIT" },
     { id:2, name:"Ellen", course:"BSCS" },
     { id:3, name:"Rina", course:"BSIT" },
@@ -19,15 +19,15 @@ function Students() {
   ]
 
   useEffect(() => {
-    setStudents(studentData)
+    setStudents(StudentData)
   }, [])
 
   return (
     <div>
       <h2>Student List</h2>
 
-      {students.map((student) => (
-        <StudentList key={student.id} data={student} />
+      {Students.map((Student) => (
+        <StudentList key={Student.id} data={Student} />
       ))}
 
     </div>
